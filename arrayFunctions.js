@@ -10,6 +10,12 @@
  */
 function isArrayLengthOdd(a) {
   // Your code here
+  const arrayLength = a.length;
+  if (arrayLength % 2 === 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -24,6 +30,12 @@ function isArrayLengthOdd(a) {
  */
 function isArrayLengthEven(a) {
   // Your code here
+  const arrayLength = a.length;
+  if (arrayLength % 2 === 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -36,6 +48,8 @@ function isArrayLengthEven(a) {
  */
 function addLailaToArray(a) {
   // Your code here
+  a.push("Laila");
+  return a;
 }
 
 /**
@@ -48,6 +62,7 @@ function addLailaToArray(a) {
  */
 function eliminateTeam(a) {
   // Your code here
+  return a.pop();
 }
 
 /**
@@ -62,6 +77,12 @@ function eliminateTeam(a) {
  */
 function secondHalfOfArrayIfItIsEven(a) {
   // Your code here
+  const arrayLength = a.length;
+  if (arrayLength % 2 === 0) {
+    return a.slice(arrayLength / 2);
+  } else {
+    return a.slice(0, -arrayLength);
+  }
 }
 
 /**
@@ -80,6 +101,22 @@ function secondHalfOfArrayIfItIsEven(a) {
  */
 function youGottaCalmDown(s) {
   // Your code here
+  var a = Array.from(s);
+  const arrayLength = a.length;
+  let newArray = [];
+
+  for (let index = 0; index < arrayLength; index++) {
+    const element = a[index];
+    if (element != "!") {
+      newArray[index] = a[index];
+    } else {
+      newArray.push("!");
+      index = arrayLength;
+    }
+  }
+
+  s = newArray.toString;
+  return s;
 }
 
 module.exports = {
